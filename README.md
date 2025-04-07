@@ -105,13 +105,13 @@ Pour les sorties du Piface voici le topic à envoyer au démarrage pour créer u
 }
 ```
 
-Le programme devra écouter les messages des topics de type **home/pico/piface/switch/** pour commander la sortie N en question 
+Le programme devra écouter les messages des topics de type **home/pico/piface/switch/N** pour commander la sortie N en question 
 et envoyer un topic **home/pico/piface/output/N** pour retourner l’état à HA ce qui permettra au **switch** dans HA de basculer (retour d'état).
 
 Le code se compose de 2 fichiers:
 
 - main.py (programme principal)
-- config.py 
+- config.py (constantes de configuration)
    * configution Wifi
    * configuration Brocker MQTT
    * Nom des topics
@@ -120,7 +120,7 @@ Le code se compose de 2 fichiers:
    * Déclaration des *inputs* utlisés en compteur
 
 j'ai rajouté une fonctionnalité qui permet de gérer des compteurs sur les inputs de la Piface, 
-ceux-ci apparaitront comme **attribut** de l'entité *input* correspondante.
+ceux-ci apparaitront comme **attribut** *counter* de l'entité *input* correspondante.
 
 <br>
 
