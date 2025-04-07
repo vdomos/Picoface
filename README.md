@@ -167,7 +167,7 @@ $ mpremote a0                                       # Se connecte sur Pico en RE
 
 * Messages MQTT au boot du pico
 
-> Topics MQTT Discovery envoyés
+> Topics MQTT Discovery envoyés à home-assistant pour créer ou mettre à jour le *device* et ses entités
 
 ```
 INFO 2025-04-07 19:49:11,867 0 0  homeassistant/switch/picoface/output0/config  {"retain": true, "device": {"identifiers": ["picoface"], "manufacturer": "PiFace", "name": "PicoFace", "model": "V1", "sw_version": "24/08/2024"}, "name": "Output 0", "payload_on": "on", "unique_id": "picoface_switch_output_0", "state_topic": "home/pico/piface/output/0", "state_on": "on", "state_off": "off", "command_topic": "home/pico/piface/switch/0", "payload_off": "off"}
@@ -226,7 +226,7 @@ INFO 2025-04-07 19:49:12,212 0 0  home/pico/piface/output/1  off
 INFO 2025-04-07 19:49:12,213 0 0  home/pico/piface/output/4  on
 ```
 
-> Ensuite toutes 60s, l'état des **inputs** et **outputs** est envoyé
+> Ensuite toutes les 60s, l'état des **inputs** et **outputs** est envoyé
 
 ```
 INFO 2025-04-07 22:56:43,911 0 0  home/pico/piface/sys/uptime  1609468115
