@@ -126,7 +126,7 @@ ceux-ci apparaitront comme **attribut** de l'entité *input* correspondante.
 
 ## Vue dans home-assistant
 
-Dés la mise en route du Pico avec ce code, l'*device* **PicoFace** doit apparaitre:
+Dés la mise en route du Pico avec ce code, le *device* **PicoFace** doit apparaitre:
 
 [![ha_devices_picoface_1](./images/ha_devices_picoface_1.png)](./images/ha_devices_picoface_1.png)
 
