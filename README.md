@@ -29,13 +29,13 @@ GPIO11 SCLK 23      GP10    SPI SCK 14
 GPIO8  CS0  24      GP9     SPI-CS  12
 ```
 
-[![Carte_Picoface_cablage](./images/Carte_Picoface_cablage.jpg)](./images/Carte_Picoface_cablage.jpg)
+[![Carte_Picoface_cablage](./images/Carte_Picoface_cablage_small.jpg)](./images/Carte_Picoface_cablage.jpg)
    <br>
 
 ## Montage sur PCB
 
 
-[![Carte_Picoface_cablage](./images/Carte_Picoface_1.jpg)](./images/Carte_Picoface_1.jpg)
+[![Carte_Picoface_cablage](./images/Carte_Picoface_1_small.jpg)](./images/Carte_Picoface_1.jpg)
 
 <br>
 
