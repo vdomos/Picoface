@@ -146,7 +146,7 @@ Avec son attribut **counter** comme préciser plus haut.
 
 * Test commande output en shell
 
-Faut utiliser le mode retain pour envoyer le msg switch sinon état output perdu au reboot du Pico => '-r'
+Faut utiliser le mode retain pour envoyer le msg **switch** sinon l'état de l'**output** perdu au reboot du Pico => '-r'
 
 ```
 $ mosquitto_pub -h mqttbrocker -t "home/pico/piface/switch/0" -m on -r
@@ -167,7 +167,7 @@ $ mpremote a0                                       # Se connecte sur Pico en RE
 
 * Messages MQTT au boot du pico
 
-Topics MQTT Discovery
+> Topics MQTT Discovery envoyés
 
 ```
 INFO 2025-04-07 19:49:11,867 0 0  homeassistant/switch/picoface/output0/config  {"retain": true, "device": {"identifiers": ["picoface"], "manufacturer": "PiFace", "name": "PicoFace", "model": "V1", "sw_version": "24/08/2024"}, "name": "Output 0", "payload_on": "on", "unique_id": "picoface_switch_output_0", "state_topic": "home/pico/piface/output/0", "state_on": "on", "state_off": "off", "command_topic": "home/pico/piface/switch/0", "payload_off": "off"}
@@ -188,6 +188,8 @@ INFO 2025-04-07 19:49:12,073 0 0  homeassistant/binary_sensor/picoface/input6/co
 INFO 2025-04-07 19:49:12,073 0 0  homeassistant/binary_sensor/picoface/input7/config  {"json_attributes_topic": "home/pico/piface/inputattributs/7", "device": {"identifiers": ["picoface"], "manufacturer": "PiFace", "name": "PicoFace", "model": "V1", "sw_version": "24/08/2024"}, "name": "Input 7", "payload_on": "off", "state_topic": "home/pico/piface/input/7", "unique_id": "picoface_input_7", "force_update": true, "device_class": "opening", "expire_after": 600, "payload_off": "on"}
 ```
 
+> Topics état des **inputs** ainsi que leur **attribut** au démarrage ainsi qu'un topic uptime
+
 ```
 INFO 2025-04-07 19:49:12,075 0 0  home/pico/piface/sys/uptime  1609530277
 INFO 2025-04-07 19:49:12,075 0 0  home/pico/piface/input/0  off
@@ -206,6 +208,11 @@ INFO 2025-04-07 19:49:12,087 0 0  home/pico/piface/input/6  off
 INFO 2025-04-07 19:49:12,088 0 0  home/pico/piface/inputattributs/6  {"counter": 0}
 INFO 2025-04-07 19:49:12,089 0 0  home/pico/piface/input/7  off
 INFO 2025-04-07 19:49:12,091 0 0  home/pico/piface/inputattributs/7  {"counter": 0}
+```
+
+> Topics **output** reçu du Brocker suite au mode retain 
+
+```
 INFO 2025-04-07 19:49:12,092 0 0  home/pico/piface/output/0  on
 INFO 2025-04-07 19:49:12,093 0 0  home/pico/piface/output/1  off
 INFO 2025-04-07 19:49:12,094 0 0  home/pico/piface/output/2  off
@@ -217,16 +224,36 @@ INFO 2025-04-07 19:49:12,209 0 0  home/pico/piface/output/7  off
 INFO 2025-04-07 19:49:12,212 0 0  home/pico/piface/output/2  off
 INFO 2025-04-07 19:49:12,212 0 0  home/pico/piface/output/1  off
 INFO 2025-04-07 19:49:12,213 0 0  home/pico/piface/output/4  on
-INFO 2025-04-07 19:49:12,347 0 0  home/pico/piface/input/0  off
-INFO 2025-04-07 19:49:12,349 0 0  home/pico/piface/input/1  off
-INFO 2025-04-07 19:49:12,351 0 0  home/pico/piface/inputattributs/1  {"counter": 0}
-INFO 2025-04-07 19:49:12,351 0 0  home/pico/piface/input/2  off
-INFO 2025-04-07 19:49:12,352 0 0  home/pico/piface/input/3  off
-INFO 2025-04-07 19:49:12,352 0 0  home/pico/piface/inputattributs/3  {"counter": 1}
-INFO 2025-04-07 19:49:12,352 0 0  home/pico/piface/input/4  off
-INFO 2025-04-07 19:49:12,353 0 0  home/pico/piface/input/5  off
-INFO 2025-04-07 19:49:12,353 0 0  home/pico/piface/input/6  off
-INFO 2025-04-07 19:49:12,354 0 0  home/pico/piface/input/7  off
+```
+
+> Ensuite toutes 60s, l'état des **inputs** et **outputs** est envoyé
+
+```
+INFO 2025-04-07 22:56:43,911 0 0  home/pico/piface/sys/uptime  1609468115
+INFO 2025-04-07 22:56:43,911 0 0  home/pico/piface/input/0  off
+INFO 2025-04-07 22:56:43,911 0 0  home/pico/piface/inputattributs/0  {"counter": 0}
+INFO 2025-04-07 22:56:43,912 0 0  home/pico/piface/input/1  off
+INFO 2025-04-07 22:56:43,938 0 0  home/pico/piface/inputattributs/1  {"counter": 0}
+INFO 2025-04-07 22:56:43,939 0 0  home/pico/piface/input/2  off
+INFO 2025-04-07 22:56:43,939 0 0  home/pico/piface/inputattributs/2  {"counter": 0}
+INFO 2025-04-07 22:56:43,940 0 0  home/pico/piface/input/3  off
+INFO 2025-04-07 22:56:43,940 0 0  home/pico/piface/inputattributs/3  {"counter": 1}
+INFO 2025-04-07 22:56:43,940 0 0  home/pico/piface/input/4  off
+INFO 2025-04-07 22:56:43,941 0 0  home/pico/piface/inputattributs/4  {"counter": 0}
+INFO 2025-04-07 22:56:43,941 0 0  home/pico/piface/input/5  off
+INFO 2025-04-07 22:56:43,942 0 0  home/pico/piface/inputattributs/5  {"counter": 0}
+INFO 2025-04-07 22:56:43,943 0 0  home/pico/piface/input/6  off
+INFO 2025-04-07 22:56:43,944 0 0  home/pico/piface/inputattributs/6  {"counter": 0}
+INFO 2025-04-07 22:56:43,945 0 0  home/pico/piface/input/7  off
+INFO 2025-04-07 22:56:43,946 0 0  home/pico/piface/inputattributs/7  {"counter": 0}
+INFO 2025-04-07 22:56:43,947 0 0  home/pico/piface/output/0  off
+INFO 2025-04-07 22:56:43,948 0 0  home/pico/piface/output/1  off
+INFO 2025-04-07 22:56:43,949 0 0  home/pico/piface/output/2  off
+INFO 2025-04-07 22:56:43,950 0 0  home/pico/piface/output/3  off
+INFO 2025-04-07 22:56:43,951 0 0  home/pico/piface/output/4  on
+INFO 2025-04-07 22:56:43,952 0 0  home/pico/piface/output/5  off
+INFO 2025-04-07 22:56:43,953 0 0  home/pico/piface/output/6  off
+INFO 2025-04-07 22:56:43,954 0 0  home/pico/piface/output/7  off
 ```
 
 
