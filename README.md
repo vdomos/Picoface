@@ -138,7 +138,7 @@ Dés la mise en route du Pico avec ce code, le *device* **PicoFace** doit appara
 
 [![ha_devices_picoface_3](./images/ha_devices_picoface_3.png)](./images/ha_devices_picoface_3.png)
 
-Avec son attribut **counter** comme préciser plus haut.
+Avec son attribut **counter** comme préciser plus haut qui s'incrémentera à chaque changement d'état de l'*input*
 
 <br>
 
