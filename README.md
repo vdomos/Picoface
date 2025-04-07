@@ -29,13 +29,13 @@ GPIO11 SCLK 23      GP10    SPI SCK 14
 GPIO8  CS0  24      GP9     SPI-CS  12
 ```
 
-[![Carte_Picoface_cablage](./images/Carte_Picoface_cablage.jpg | width=600)](./images/Carte_Picoface_cablage.jpg)
+[![Carte_Picoface_cablage](./images/Carte_Picoface_cablage.jpg)](./images/Carte_Picoface_cablage.jpg)
    <br>
 
 ## Montage sur PCB
 
 
-[![Carte_Picoface_cablage](./images/Carte_Picoface_1.jpg | width=300)](./images/Carte_Picoface_1.jpg)
+[![Carte_Picoface_cablage](./images/Carte_Picoface_1.jpg)](./images/Carte_Picoface_1.jpg)
 
 <br>
 
@@ -128,15 +128,15 @@ ceux-ci apparaitront comme **attribut** de l'entité *input* correspondante.
 
 Dés la mise en route du Pico avec ce code, l'*device* **PicoFace** doit apparaitre:
 
-[![ha_devices_picoface_1](./images/ha_devices_picoface_1.png | width=600)](./images/ha_devices_picoface_1.png)
+[![ha_devices_picoface_1](./images/ha_devices_picoface_1.png)](./images/ha_devices_picoface_1.png)
 
 * Détail du *device*
 
-[![ha_devices_picoface_2](./images/ha_devices_picoface_2.png | width=600)](./images/ha_devices_picoface_2.png)
+[![ha_devices_picoface_2](./images/ha_devices_picoface_2.png)](./images/ha_devices_picoface_2.png)
 
 * Vue de l'entité *input 1*
 
-[![ha_devices_picoface_3](./images/ha_devices_picoface_3.png | width=600)](./images/ha_devices_picoface_3.png)
+[![ha_devices_picoface_3](./images/ha_devices_picoface_3.png)](./images/ha_devices_picoface_3.png)
 
 Avec son attribut **counter** comme préciser plus haut.
 
