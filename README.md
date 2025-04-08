@@ -8,13 +8,13 @@ La librairie MicroPython utlisée est reprise sur le [Github McHobby](https://gi
 
 Le but de ce montage est de pouvoir piloter la Piface à partir de Home-assistant.
 Pour cela j'ai utlisé le protocole [MQTT Discovery](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery) 
-fourni par home-assistant pour créer automatiqument des appareils (devices) dans HA.
+fourni par home-assistant pour créer automatiqument un appareil (device) dans HA.
 
 <br>
 
 ## Cablage avec une Pico Wifi
 
-Le cablage avec la Pico-W utlise la SPI1 , la SPI0 est utlisé par le module Wifi embarqué.
+Le cablage avec la Pico-W utlise la **SPI1** , la SPI0 est utlisé par le module Wifi embarqué.
 
 Voici le cablage utilisée:
 
