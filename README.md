@@ -1,7 +1,7 @@
 # Picoface
 Pico Piface sous home-assistant
 
-> Pilotage carte Piface V1 par MQTT sous Home-assistant ave cun Pico sous Micropython
+> Pilotage carte Piface V1 par MQTT sous Home-assistant avec un Pico sous Micropython
 
 La librairie MicroPython utlisée est reprise sur le [Github McHobby](https://github.com/mchobby/esp8266-upy/tree/master/hat-piface)
 
@@ -19,7 +19,7 @@ Le cablage avec la Pico-W utlise la SPI1 , la SPI0 est utlisé par le module Wif
 Voici le cablage utilisée:
 
 ```
-Pi Hat              Pico
+[Pi Hat]            [Pico]
 5V          2       VBUS    40
 3.3V        1       3.3V    36
 Gnd         6       Gnd     2
