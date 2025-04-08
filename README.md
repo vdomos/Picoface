@@ -42,6 +42,7 @@ GPIO8  CS0  24      GP9     SPI-CS  12
 ## Code
 
 Testé sur: **MicroPython v1.22.2 on 2024-02-22; Raspberry Pi Pico W with RP2040**
+Je ne suis pas un Pro de Python, alors le code peut sûrement être amélioré
 
 Au boot du Pico, les topics [MQTT Discovery](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery) HA sont envoyés 
 et cela va créer un appareil **PicoFace** avec des entitées de type **binary_sensor** pour les *inputs* du Piface 
